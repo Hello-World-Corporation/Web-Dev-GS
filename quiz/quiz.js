@@ -1,3 +1,5 @@
+// Array de questões e respostas para o quiz
+
 const questions = [
     {
         question: "Qual é o principal objetivo da plataforma SpaceFarm?",
@@ -41,13 +43,16 @@ const questions = [
     }
 ];
 
+// Pegando os elementos do DOM para manipulação do quiz
 const questionElement = document.getElementById("question");    
 const answerButtonsElement = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
+// Colocando variáveis para controle do estado do quiz
 let currentQuestionIndex = 0;
 let score = 0;
 
+// Criando uma função para iniciar o quiz, resetando as variáveis e mostrando a primeira questão
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
@@ -55,12 +60,15 @@ function startQuiz() {
     showQuestion();
 }
 
+// Resetando o estado para a próxima questão, limpando as respostas anteriores e escondendo o botão de próxima pergunta
 function resetState() {
     nextButton.style.display = "none";
     while(answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 }
+
+// Numerando as perguntas e mostrando as opções de resposta dinamicamente, criando botões para cada resposta e adicionando um evento de clique para selecionar a resposta
 function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -77,6 +85,7 @@ function showQuestion() {
     });
 }
 
+// Verficiando se a resposta selecionada é correta, adicionando uma classe de estilo para indicar se a resposta está correta ou incorreta, desabilitando os botões de resposta após a seleção e mostrando o botão de próxima pergunta
 function selectAnswer(e) {
     answers = questions[currentQuestionIndex].answers
     const correctAnswer = answers.filter(answer => answer.correct == true)[0];
@@ -94,7 +103,7 @@ function selectAnswer(e) {
     });
     nextButton.style.display = "block";
 }
-
+// Mostrando a pontuação final do quiz, resetando o estado para mostrar a pontuação e mudando o texto do botão de próxima pergunta para reiniciar o quiz, adicionando um evento de clique para reiniciar o quiz ao clicar no botão de reiniciar quiz
 function showScore() {
     resetState();
     questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
@@ -107,7 +116,7 @@ function showScore() {
 }
 
 
-
+// Colocando a funcionalidade de pular para a próxima pergunta resposta, incrementando o índice da questão atual e verificando se ainda há questões restantes para mostrar a próxima questão ou mostrar a pontuação final do quiz
 function handledNextButton() {
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length) {
@@ -117,6 +126,7 @@ function handledNextButton() {
     }
 }
 
+// Aqui adicionamos um evento de clique para o botão de próxima pergunta, verificando se ainda há questões restantes para mostrar a próxima questão ou mostrar a pontuação final do quiz
 nextButton.addEventListener("click", () => {
     if(currentQuestionIndex < questions.length - 1) {
         handledNextButton();
