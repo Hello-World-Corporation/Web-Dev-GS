@@ -4,12 +4,11 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>SpaceFarm</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/estilo/style.css">
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,51 +24,62 @@
 
 <body>
 
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <h1 class="logo">SpaceFarm</h1>
+
+        <ul class="menu">
+
+            <li><a href="#problema">Problema</a></li>
+            <li><a href="#tecnologia">Tecnologia</a></li>
+            <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#publico">Público</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#aplicacao">Aplicação</a></li>
+
+        </ul>
+
+        <!-- TROCA DE TEMA -->
+        <div class="temas">
+
+            <button class="tema-verde"
+                onclick="trocarTema('verde')"
+                title="Tema Verde">
+            </button>
+
+            <button class="tema-azul"
+                onclick="trocarTema('azul')"
+                title="Tema Azul">
+            </button>
+
+            <button class="tema-escuro"
+                onclick="trocarTema('escuro')"
+                title="Tema Escuro">
+            </button>
+
+        </div>
+
+    </nav>
+
     <!-- HEADER -->
     <header>
 
-        <!-- NAVBAR -->
-        <nav class="navbar">
-
-            <h1 class="logo">
-                SpaceFarm
-            </h1>
-
-            <ul class="menu">
-
-                <li><a href="#quiz">Quiz</a></li>
-
-                <li><a href="#problema">Problema</a></li>
-
-                <li><a href="#tecnologia">Tecnologia</a></li>
-
-                <li><a href="#objetivos">Objetivos</a></li>
-
-                <li><a href="#publico">Público</a></li>
-
-                <li><a href="#beneficios">Benefícios</a></li>
-
-                <li><a href="#aplicacao">Aplicação</a></li>
-
-            </ul>
-
-        </nav>
-
-        <!-- HERO -->
         <section class="hero">
 
             <div class="hero-conteudo">
 
                 <h2>
-                    Agricultura inteligente com tecnologia espacial
+                    Agricultura Inteligente com Tecnologia Espacial
                 </h2>
 
                 <p>
-                    Monitoramento agrícola usando satélites, sensores IoT e alertas inteligentes.
+                    Integração entre satélites, sensores IoT e análise inteligente para aumentar a produtividade agrícola.
                 </p>
 
                 <a href="#problema" class="botao">
-                    Conheça a solução
+                    Conheça a Solução
                 </a>
 
             </div>
@@ -78,29 +88,41 @@
 
     </header>
 
+    <!-- SLIDESHOW -->
+    <section class="slideshow">
+
+        <img
+            id="slide"
+            src="imgs/plantação_agrícola.jpeg"
+            alt="Imagem do slideshow">
+
+    </section>
+
     <!-- MAIN -->
     <main>
 
         <!-- PROBLEMA -->
         <section id="problema" class="secao container">
 
+            <h2>Problema</h2>
+
             <div class="conteudo">
 
                 <div class="texto">
 
-                    <h2>Problema</h2>
-
                     <p>
-                        Produtores rurais enfrentam perdas causadas por clima e monitoramento insuficiente.
+                        Produtores rurais sofrem perdas causadas por mudanças climáticas e falta de monitoramento.
                     </p>
 
                     <p>
-                        A falta de dados em tempo real dificulta decisões rápidas e eficientes.
+                        A ausência de dados em tempo real dificulta decisões rápidas e eficientes.
                     </p>
 
                 </div>
 
-                <img src="imgs/plantação_agrícola.jpeg" alt="Plantação agrícola">
+                <img
+                    src="imgs/plantação_agrícola.jpeg"
+                    alt="Plantação agrícola">
 
             </div>
 
@@ -111,16 +133,16 @@
 
             <h2>Tecnologia</h2>
 
-            <div class="cards container">
+            <div class="cards">
 
                 <div class="card">
 
                     <i class="fa-solid fa-satellite icone"></i>
 
-                    <h3>Dados Orbitais</h3>
+                    <h3>Satélites</h3>
 
                     <p>
-                        Informações coletadas por satélites do INPE, NASA e ESA.
+                        Dados coletados por satélites do INPE, NASA e ESA.
                     </p>
 
                 </div>
@@ -132,7 +154,7 @@
                     <h3>Sensores IoT</h3>
 
                     <p>
-                        Monitoramento de solo, temperatura e umidade em tempo real.
+                        Monitoramento de solo, temperatura e umidade.
                     </p>
 
                 </div>
@@ -144,7 +166,7 @@
                     <h3>Análise Inteligente</h3>
 
                     <p>
-                        Processamento local via Arduino com alertas automáticos.
+                        Processamento local via Arduino e geração de alertas.
                     </p>
 
                 </div>
@@ -158,7 +180,7 @@
 
             <h2>Objetivos</h2>
 
-            <div class="cards container">
+            <div class="cards">
 
                 <div class="card">
 
@@ -167,7 +189,7 @@
                     <h3>Reduzir perdas</h3>
 
                     <p>
-                        Identificar riscos climáticos antes que afetem a produção.
+                        Identificar riscos antes que afetem a produção.
                     </p>
 
                 </div>
@@ -179,7 +201,7 @@
                     <h3>Economizar recursos</h3>
 
                     <p>
-                        Melhorar o uso de água e energia nas lavouras.
+                        Melhorar o uso de água e energia.
                     </p>
 
                 </div>
@@ -188,10 +210,10 @@
 
                     <i class="fa-solid fa-earth-americas icone"></i>
 
-                    <h3>Agricultura sustentável</h3>
+                    <h3>Sustentabilidade</h3>
 
                     <p>
-                        Incentivar práticas agrícolas mais eficientes e inteligentes.
+                        Promover uma agricultura moderna e eficiente.
                     </p>
 
                 </div>
@@ -203,14 +225,15 @@
         <!-- PÚBLICO -->
         <section id="publico" class="secao container">
 
+            <h2>Público-Alvo</h2>
+
             <div class="conteudo">
 
-                <img src="imgs/agricultor_analisando_plantacao.jpeg"
-                    alt="Agricultor analisando lavoura">
+                <img
+                    src="imgs/agricultor_analisando_plantacao.jpeg"
+                    alt="Agricultor analisando plantação">
 
                 <div class="texto">
-
-                    <h2>Público-Alvo</h2>
 
                     <p>
                         O SpaceFarm atende produtores, cooperativas e empresas agrícolas.
@@ -219,13 +242,9 @@
                     <ul>
 
                         <li>Produtores rurais</li>
-
                         <li>Cooperativas agrícolas</li>
-
                         <li>Empresas do agronegócio</li>
-
-                        <li>Pesquisadores ambientais</li>
-
+                        <li>Pesquisadores</li>
                         <li>Instituições agrícolas</li>
 
                     </ul>
@@ -241,7 +260,7 @@
 
             <h2>Benefícios</h2>
 
-            <div class="cards container">
+            <div class="cards">
 
                 <div class="card">
                     <i class="fa-solid fa-clock icone"></i>
@@ -259,48 +278,39 @@
                 </div>
 
                 <div class="card">
-                    <i class="fa-solid fa-cloud-sun-rain icone"></i>
-                    <h3>Prevenção climática</h3>
-                </div>
-
-                <div class="card">
                     <i class="fa-solid fa-chart-column icone"></i>
                     <h3>Melhor tomada de decisão</h3>
-                </div>
-
-                <div class="card">
-                    <i class="fa-solid fa-water icone"></i>
-                    <h3>Redução do desperdício</h3>
                 </div>
 
             </div>
 
         </section>
+
         <!-- QUIZ -->
+        <section id="quiz" class="quiz-section">
 
-<section id="quiz" class="quiz-section">
+            <div class="quiz-conteudo">
 
-    <div class="quiz-conteudo">
+                <h2>Teste seus conhecimentos</h2>
 
-        <h2>Teste seus conhecimentos</h2>
+                <p>
+                    Responda ao quiz e descubra quanto você sabe sobre agricultura inteligente.
+                </p>
 
-        <p>
-            Teste seus conhecimentos sobre agricultura inteligente e sustentabilidade.
-        </p>
+                <a href="quiz/quiz.html" class="botao">
+                    Iniciar Quiz
+                </a>
 
-        <a href="/quiz/quiz.html" class="botao">
-            Iniciar Quiz
-        </a>
+            </div>
 
-    </div>
+        </section>
 
-</section>
         <!-- APLICAÇÃO -->
         <section id="aplicacao" class="secao container">
 
             <h2>Aplicação no Dia a Dia</h2>
 
-            <div class="cards container">
+            <div class="cards">
 
                 <div class="card">
 
@@ -309,7 +319,7 @@
                     <h3>Temperatura</h3>
 
                     <p>
-                        Sensores identificam mudanças climáticas na lavoura.
+                        Sensores monitoram mudanças climáticas na lavoura.
                     </p>
 
                 </div>
@@ -321,7 +331,7 @@
                     <h3>Umidade</h3>
 
                     <p>
-                        O sistema monitora níveis ideais para irrigação.
+                        Controle mais eficiente da irrigação.
                     </p>
 
                 </div>
@@ -333,7 +343,7 @@
                     <h3>Satélites</h3>
 
                     <p>
-                        Dados orbitais ajudam no acompanhamento da vegetação.
+                        Acompanhamento do desenvolvimento da vegetação.
                     </p>
 
                 </div>
@@ -342,10 +352,10 @@
 
                     <i class="fa-solid fa-mobile-screen-button icone"></i>
 
-                    <h3>Alertas Web/App</h3>
+                    <h3>Alertas</h3>
 
                     <p>
-                        Produtores recebem notificações inteligentes em tempo real.
+                        Notificações enviadas ao produtor em tempo real.
                     </p>
 
                 </div>
@@ -353,6 +363,22 @@
             </div>
 
         </section>
+        <section class="temas">
+
+            <button class="tema verde-btn"
+                onclick="trocarTema('verde')">
+            </button>
+
+            <button class="tema azul-btn"
+                onclick="trocarTema('azul')">
+            </button>
+
+            <button class="tema escuro-btn"
+                onclick="trocarTema('escuro')">
+            </button>
+
+    </section>
+
 
     </main>
 
@@ -361,31 +387,21 @@
 
         <h3>SpaceFarm</h3>
 
-        <p>
-            Agricultura inteligente com tecnologia espacial.
-        </p>
+        <p>Agricultura inteligente com tecnologia espacial.</p>
 
-        <p>
-            Nicolas Prestelo - RM570785
-        </p>
+        <p>Nicolas Prestelo - RM570785</p>
 
-        <p>
-            Enzo Palumbo - RM569171
-        </p>
+        <p>Enzo Palumbo - RM569171</p>
 
-        <p>
-            Jonathan Josué - RM569810
-        </p>
+        <p>Jonathan Josué - RM569810</p>
 
-        <p>
-            Murillo Serrano - RM569296
-        </p>
+        <p>Murillo Serrano - RM569296</p>
 
-        <p>
-            Kaique Moura - RM572345
-        </p>
+        <p>Kaique Moura - RM572345</p>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 

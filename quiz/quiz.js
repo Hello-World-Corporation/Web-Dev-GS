@@ -1,4 +1,4 @@
-// PERGUNTAS DO QUIZ
+// Perguntas do Quiz
 
 const perguntas = [
     {
@@ -112,50 +112,40 @@ const perguntas = [
     }
 ];
 
-let perguntaAtual = 0;
+let numeroPergunta = 0;
 let pontos = 0;
 
 const pergunta = document.getElementById("question");
 const respostas = document.getElementById("answer-buttons");
-const botaoProximo = document.getElementById("next-btn");
-
-mostrarPergunta();
 
 function mostrarPergunta() {
 
-    respostas.innerHTML = "";
+    pergunta.innerHTML = perguntas[numeroPergunta].pergunta;
 
-    pergunta.innerHTML =
-        (perguntaAtual + 1) + ". " + perguntas[perguntaAtual].pergunta;
+    let html = "";
 
-    for(let i = 0; i < perguntas[perguntaAtual].opcoes.length; i++) {
+    for (let i = 0; i < perguntas[numeroPergunta].opcoes.length; i++) {
 
-        const botao = document.createElement("button");
-
-        botao.innerHTML = perguntas[perguntaAtual].opcoes[i];
-
-        botao.classList.add("btn");
-
-        botao.onclick = function() {
-            verificarResposta(i);
-        };
-
-        respostas.appendChild(botao);
+        html +=
+            "<button class='btn' onclick='responder(" + i + ")'>" +
+            perguntas[numeroPergunta].opcoes[i] +
+            "</button>";
     }
+
+    respostas.innerHTML = html;
 }
 
-function verificarResposta(indice) {
+function responder(opcaoEscolhida) {
 
-    if(indice === perguntas[perguntaAtual].correta) {
+    if (opcaoEscolhida === perguntas[numeroPergunta].correta) {
         pontos++;
     }
 
-    perguntaAtual++;
+    numeroPergunta++;
 
-    if(perguntaAtual < perguntas.length) {
+    if (numeroPergunta < perguntas.length) {
         mostrarPergunta();
-    }
-    else {
+    } else {
         mostrarResultado();
     }
 }
@@ -169,7 +159,16 @@ function mostrarResultado() {
         perguntas.length +
         " perguntas!";
 
-    respostas.innerHTML = "";
-
-    botaoProximo.style.display = "none";
+    respostas.innerHTML =
+        "<button class='btn' onclick='reiniciarQuiz()'>Reiniciar Quiz</button>";
 }
+
+function reiniciarQuiz() {
+
+    numeroPergunta = 0;
+    pontos = 0;
+
+    mostrarPergunta();
+}
+
+mostrarPergunta();
