@@ -117,8 +117,12 @@ let pontos = 0;
 
 const pergunta = document.getElementById("question");
 const respostas = document.getElementById("answer-buttons");
+const contador = document.getElementById("contador");   // ← Adicionado
 
 function mostrarPergunta() {
+
+    // Atualiza o contador
+    contador.innerHTML = "Pergunta " + (numeroPergunta + 1) + " de " + perguntas.length;
 
     pergunta.innerHTML = perguntas[numeroPergunta].pergunta;
 
