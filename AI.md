@@ -39,16 +39,16 @@ Nenhuma sugestão foi rejeitada.
 ### Interação 3 – Slideshow
 
 **Solicitação para a IA:**
-Verificar por que as imagens do slideshow não estavam alternando.
+Auxílio na implementação e correção do slideshow de imagens da página principal.
 
 **Retorno da IA:**
-Foi explicado que a troca automática exigia JavaScript ou uma implementação específica utilizando animações CSS.
+Foram fornecidas orientações sobre a estrutura HTML, CSS e JavaScript necessária para a troca automática das imagens.
 
 **Alterações realizadas:**
-Foi implementada a solução escolhida pela equipe.
+A solução foi adaptada e integrada ao projeto pela equipe.
 
 **O que foi rejeitado:**
-Foram descartadas alternativas que exigiam bibliotecas externas.
+Foram mantidas apenas as funcionalidades compatíveis com os requisitos da disciplina e descartadas alternativas que exigiam bibliotecas externas.
 
 
 ---
