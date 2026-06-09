@@ -131,6 +131,12 @@ const opcao3 = document.getElementById("opcao3");
 
 function mostrarPergunta() {
 
+    const opcao0 = document.getElementById("opcao0");
+    const opcao1 = document.getElementById("opcao1");
+    const opcao2 = document.getElementById("opcao2");
+    const opcao3 = document.getElementById("opcao3");
+
+
     contador.innerHTML =
         "Pergunta " +
         (numeroPergunta + 1) +
@@ -186,7 +192,20 @@ function reiniciarQuiz() {
     numeroPergunta = 0;
     pontos = 0;
 
+    respostas.innerHTML = 
+    `
+    <button class="btn" id="opcao0" onclick="responder(0)"></button>
+
+    <button class="btn" id="opcao1" onclick="responder(1)"></button>
+
+    <button class="btn" id="opcao2" onclick="responder(2)"></button>
+
+    <button class="btn" id="opcao3" onclick="responder(3)"></button>
+    `;
+
+
     mostrarPergunta();
+
 }
 
 mostrarPergunta();
